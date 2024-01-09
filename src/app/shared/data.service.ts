@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Todo } from './todo-list.model'
+import { Todo } from './todo.model'
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   
-  todo-list: Todo[]
+  todos: Todo[] = [
+    { text: 'Test' }
+  ]
 
   constructor() { }
 
@@ -21,5 +23,9 @@ addTodo(todo: Todo){
 
 updateTodo(index: number, updateTodo: Todo){
   this.todos[index] = updatedTodo
+}
+
+deleteTodo(index: number) {
+  this.todos.splice(index, 1)
 }
 }
