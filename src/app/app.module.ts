@@ -3,13 +3,13 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoListComponent } from './todo/todo.component';
+import { TodoComponent } from './todo/todo.component';
 import { KanbanComponent } from './kanban/kanban.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent,
+    TodoComponent,
     KanbanComponent
   ],
   imports: [
