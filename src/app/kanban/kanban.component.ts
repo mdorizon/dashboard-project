@@ -4,7 +4,8 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag, CdkDropList }
 @Component({
   selector: 'app-kanban',
   templateUrl: './kanban.component.html',
-  styleUrl: './kanban.component.scss'
+  styleUrl: './kanban.component.scss',
+
 })
 export class KanbanComponent {
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
