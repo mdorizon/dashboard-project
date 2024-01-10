@@ -13,13 +13,13 @@
     justify-content: center;
     background: rgba(gray, 0.5);
     padding: 8px 15px;
-  
+
     .board-name {
       font-size: 20px;
       font-weight: bold;
       color: white;
     }
-  
+
   }
 
   .board-wrapper {
@@ -45,7 +45,6 @@
         padding-left: 5px;
         padding-right: 5px;
 
-        background-color: var(--color-green-light);
         border-radius: 5px;
 
         .column-head {
@@ -59,26 +58,20 @@
           }
 
           .column-title {
-            font-weight: 500; 
+            font-weight: 500;
             .column-title-content {
-              display: inline-flex; 
-              align-items: center; 
-              height: 20px; 
-              border-radius: 10px; 
-              padding-left: 7px; 
-              padding-right: 9px; 
-              color: var(--color-green-text); 
-              background: var(--color-green-white); 
+              display: inline-flex;
+              align-items: center;
+              height: 20px;
+              border-radius: 10px;
+              padding-left: 7px;
+              padding-right: 9px;
               .column-title-dot {
-                margin-right: 5px; 
-                border-radius: 99px; 
-                height: 8px; 
-                width: 8px; 
-                background-color: var(--color-green-dark); 
-                display: inline-flex; 
-              }
-              .column-title-text {
-                color: var(--color-green-text);
+                margin-right: 5px;
+                border-radius: 99px;
+                height: 8px;
+                width: 8px;
+                display: inline-flex;
               }
             }
           }
@@ -87,14 +80,13 @@
             padding-top: 2px;
             padding-left: 8px;
             align-items: center;
-            color: var(--color-green-dark); 
           }
 
-          
+
           .column-title-hover-content {
             opacity: 0;
             transition: opacity 100ms ease-in-out 0s;
-            
+
             .column-add-task-button {
               display: flex;
               align-items: center;
@@ -109,14 +101,14 @@
             }
           }
         }
-        
+
       }
       .board-column:hover {
         .column-head .column-title-hover-content {
           opacity: 1;
         }
       }
-      
+
     }
 
   }

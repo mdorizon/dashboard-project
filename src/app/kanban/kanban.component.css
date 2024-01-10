@@ -39,7 +39,6 @@
   min-width: 260px;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: var(--color-green-light);
   border-radius: 5px;
 }
 .board .board-wrapper .board-columns .board-column .column-head {
@@ -61,26 +60,19 @@
   border-radius: 10px;
   padding-left: 7px;
   padding-right: 9px;
-  color: var(--color-green-text);
-  background: var(--color-green-white);
 }
 .board .board-wrapper .board-columns .board-column .column-head .column-title .column-title-content .column-title-dot {
   margin-right: 5px;
   border-radius: 99px;
   height: 8px;
   width: 8px;
-  background-color: var(--color-green-dark);
   display: inline-flex;
-}
-.board .board-wrapper .board-columns .board-column .column-head .column-title .column-title-content .column-title-text {
-  color: var(--color-green-text);
 }
 .board .board-wrapper .board-columns .board-column .column-head .column-tasks-counter {
   display: flex;
   padding-top: 2px;
   padding-left: 8px;
   align-items: center;
-  color: var(--color-green-dark);
 }
 .board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content {
   opacity: 0;
