@@ -10299,6 +10299,10 @@ app-kanban-page {
   overflow-x: auto;
 }
 
+p {
+  margin: 0 !important;
+}
+
 :root {
   --color-gray-light: rgb(249, 249, 248);
   --color-gray-tag: rgb(227, 226, 224);
