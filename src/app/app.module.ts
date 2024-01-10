@@ -12,6 +12,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { KanbanPageComponent } from './pages/kanban-page/kanban-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
     KanbanComponent,
     KanbanPageComponent,
     HomeComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    EditTodoDialogComponent
   ],
   imports: [
     BrowserModule,
