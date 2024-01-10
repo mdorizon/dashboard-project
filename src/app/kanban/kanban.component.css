@@ -33,7 +33,7 @@
   flex-direction: column;
   height: -moz-fit-content;
   height: fit-content;
-  min-width: 260px;
+  min-width: 270px;
   padding: 0 5px 5px 5px;
   border-radius: 5px;
 }
@@ -117,37 +117,27 @@
   padding: 8px 10px 6px 6px;
 }
 .tasks-container .task .tasks-content .tasks-content-icon {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   transition: background 20ms ease-in 0s;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 24px;
-  width: 24px;
+  min-width: 24px;
   border-radius: 5px;
-  flex-shrink: 0;
-  margin-top: 1px;
-  margin-left: 0px;
-  margin-right: 2px;
-  padding: 2px;
-  float: left;
+}
+.tasks-container .task .tasks-content .tasks-content-icon:hover {
+  background-color: rgba(55, 53, 47, 0.08);
 }
 .tasks-container .task .tasks-content .tasks-content-text {
   max-width: 100%;
   width: auto;
-  white-space: pre-wrap;
   word-break: break-word;
-  caret-color: rgb(55, 53, 47);
   font-size: 14px;
   line-height: 1.5;
   min-height: 21px;
   font-weight: 500;
-  flex-grow: 1;
   padding: 2px;
-  pointer-events: none;
 }
 .tasks-container .task:hover {
   background-color: rgba(55, 53, 47, 0.04);
@@ -166,9 +156,6 @@
   padding: 8px 10px 6px 6px;
 }
 .cdk-drag-preview .tasks-content .tasks-content-icon {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   transition: background 20ms ease-in 0s;
   cursor: pointer;
   display: flex;
@@ -177,12 +164,6 @@
   height: 24px;
   width: 24px;
   border-radius: 5px;
-  flex-shrink: 0;
-  margin-top: 1px;
-  margin-left: 0px;
-  margin-right: 2px;
-  padding: 2px;
-  float: left;
 }
 .cdk-drag-preview .tasks-content .tasks-content-text {
   max-width: 100%;
@@ -219,8 +200,8 @@
 
 .dragging-placeholder {
   background: #9AC7F0;
-  height: 0;
-  z-index: 1000;
+  height: 4;
+  margin: 4px 0;
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 

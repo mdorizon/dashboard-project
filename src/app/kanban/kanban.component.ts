@@ -14,7 +14,7 @@ export class KanbanComponent {
   board: Board = new Board('Test board', [
     new Column('Ideas', [
       "Some random idea",
-      "This is another random idea",
+      "This is another random ideaThis is another random ideaThis is another random ideaThis is another random idea",
       "build an awesome application"
     ],
     'gray'),
