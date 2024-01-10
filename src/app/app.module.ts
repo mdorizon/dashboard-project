@@ -1,34 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
+
+import { TodosComponent } from './todos/todos.component';
+
 import { KanbanComponent } from './kanban/kanban.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { KanbanPageComponent } from './pages/kanban-page/kanban-page.component';
 import { HomeComponent } from './pages/home/home.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
+import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog'
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    TodoComponent,
-    KanbanComponent
-=======
-    TodoListComponent,
+    TodosComponent,
     KanbanComponent,
     KanbanPageComponent,
-    HomeComponent
->>>>>>> fc44934aa130a8fb02103a828c5c06a084298fa3
+    HomeComponent,
+    TodoItemComponent,
+    EditTodoDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    FormsModule,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration()
