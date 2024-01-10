@@ -199,15 +199,28 @@
   pointer-events: none;
 }
 
-.cdk-drag-placeholder {
-  opacity: 0;
-}
-
 .cdk-drag-animating {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .tasks-container.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list-dragging .task:hover {
+  background-color: white !important;
+}
+.cdk-drop-list-dragging .column-head .column-title-hover-content {
+  opacity: 0 !important;
+}
+.cdk-drop-list-dragging .new-task-button:hover {
+  background: transparent !important;
+}
+
+.dragging-placeholder {
+  background: #9AC7F0;
+  height: 0;
+  z-index: 1000;
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
