@@ -1,6 +1,63 @@
 @import '../node_modules/bulma/bulma.sass';
 @import '../src/_main-styles.scss';
 
+:root {
+  // GRAY KANBAN COLOR
+  --color-gray-light: rgb(249, 249, 248);
+  --color-gray-tag: rgb(227, 226, 224);
+  --color-gray-dark: rgb(145, 145, 142);
+  --color-gray-text: rgb(50, 48, 44);
+
+  // BROWN KANBAN COLOR
+  --color-brown-light: rgba(250, 246, 245, 0.7);
+  --color-brown-tag: rgb(238, 224, 218);
+  --color-brown-dark: rgb(187, 132, 108);
+  --color-brown-text: rgb(68, 42, 30);
+
+  // ORANGE KANBAN COLOR
+  --color-orange-light: rgba(252, 245, 242, 0.7);
+  --color-orange-tag: rgb(250, 222, 201);
+  --color-orange-dark: rgb(215, 129, 58);
+  --color-orange-text: rgb(73, 41, 14);
+
+  // YELLOW KANBAN COLOR
+  --color-yellow-light: rgba(250, 247, 237, 0.7);
+  --color-yellow-tag: rgb(253, 236, 200);
+  --color-yellow-dark: rgb(203, 148, 51);
+  --color-yellow-text: rgb(64, 44, 27);
+
+  // GREEN KANBAN COLOR
+  --color-green-light: rgba(244, 248, 243, 0.7);
+  --color-green-tag: rgb(219, 237, 219);
+  --color-green-dark: rgb(108, 155, 125);
+  --color-green-text: rgb(28, 56, 41);
+
+  // BLUE KANBAN COLOR
+  --color-blue-light: rgba(241, 248, 251, 0.7);
+  --color-blue-tag: rgb(211, 229, 239);
+  --color-blue-dark: rgb(91, 151, 189);
+  --color-blue-text: rgb(24, 51, 71);
+
+  // PURPLE KANBAN COLOR
+  --color-purple-light: rgba(249, 246, 252, 0.7);
+  --color-purple-tag: rgb(232, 222, 238);
+  --color-purple-dark: rgb(167, 130, 195);
+  --color-purple-text: rgb(65, 36, 84);
+
+  // PINK KANBAN COLOR
+  --color-pink-light: rgba(251, 245, 251, 0.7);
+  --color-pink-tag: rgb(245, 224, 233);
+  --color-pink-dark: rgb(205, 116, 159);
+  --color-pink-text: rgb(76, 35, 55);
+
+  // RED KANBAN COLOR
+  --color-red-light: rgba(253, 245, 243, 0.7);
+  --color-red-tag: rgb(255, 226, 221);
+  --color-red-dark: rgb(225, 111, 100);
+  --color-red-text: rgb(93, 23, 21);
+
+}
+
 .mat-mdc-dialog-container .mdc-dialog__surface{
     padding: 15px;
 }
@@ -28,7 +85,5 @@
     
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
