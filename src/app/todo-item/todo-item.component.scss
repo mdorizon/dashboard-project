@@ -21,7 +21,7 @@
         height: 28px;
         width: 28px;
         margin-right: 20px;
-        transition: background-color 0.2s;
+        transition: background-color 0.2s, border-color 0.2s;
 
         i.material-icons{
             font-size: 20px;
@@ -105,6 +105,10 @@
     }
 }
 
-.todo-controls-box .todo-control-button.is-danger:active i.material-icons{
+.todo-controls-box .todo-control-button.is-danger:hover i.material-icons{
     color: rgb(219, 38, 38);
+}
+
+.todo-controls-box .todo-control-button.is-danger:active i.material-icons{
+    color: rgb(255, 40, 40);
 }
