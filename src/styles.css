@@ -10298,16 +10298,40 @@ app-kanban-page {
 }
 
 :root {
-  --color-green-light: rgba(244, 248, 243, 0.7);
-  --color-green-white: rgb(219, 237, 219);
-  --color-green-dark: rgb(108, 155, 125);
-  --color-green-text: rgb(28, 56, 41);
-  --color-gray-light: rgba(244, 248, 243, 0.7);
-  --color-gray-white: rgb(219, 237, 219);
-  --color-gray-dark: rgb(108, 155, 125);
-  --color-gray-text: rgb(28, 56, 41);
+  --color-gray-light: rgb(249, 249, 248);
+  --color-gray-tag: rgb(227, 226, 224);
+  --color-gray-dark: rgb(145, 145, 142);
+  --color-gray-text: rgb(50, 48, 44);
+  --color-brown-light: rgba(244, 248, 243, 0.7);
+  --color-brown-tag: rgb(219, 237, 219);
+  --color-brown-dark: rgb(108, 155, 125);
+  --color-brown-text: rgb(28, 56, 41);
   --color-orange-light: rgba(244, 248, 243, 0.7);
-  --color-orange-white: rgb(219, 237, 219);
+  --color-orange-tag: rgb(219, 237, 219);
   --color-orange-dark: rgb(108, 155, 125);
   --color-orange-text: rgb(28, 56, 41);
+  --color-yellow-light: rgba(244, 248, 243, 0.7);
+  --color-yellow-tag: rgb(219, 237, 219);
+  --color-yellow-dark: rgb(108, 155, 125);
+  --color-yellow-text: rgb(28, 56, 41);
+  --color-green-light: rgba(244, 248, 243, 0.7);
+  --color-green-tag: rgb(219, 237, 219);
+  --color-green-dark: rgb(108, 155, 125);
+  --color-green-text: rgb(28, 56, 41);
+  --color-blue-light: rgba(244, 248, 243, 0.7);
+  --color-blue-tag: rgb(219, 237, 219);
+  --color-blue-dark: rgb(108, 155, 125);
+  --color-blue-text: rgb(28, 56, 41);
+  --color-purple-light: rgba(244, 248, 243, 0.7);
+  --color-purple-tag: rgb(219, 237, 219);
+  --color-purple-dark: rgb(108, 155, 125);
+  --color-purple-text: rgb(28, 56, 41);
+  --color-pink-light: rgba(244, 248, 243, 0.7);
+  --color-pink-tag: rgb(219, 237, 219);
+  --color-pink-dark: rgb(108, 155, 125);
+  --color-pink-text: rgb(28, 56, 41);
+  --color-red-light: rgba(244, 248, 243, 0.7);
+  --color-red-tag: rgb(219, 237, 219);
+  --color-red-dark: rgb(108, 155, 125);
+  --color-red-text: rgb(28, 56, 41);
 }/*# sourceMappingURL=styles.css.map */
