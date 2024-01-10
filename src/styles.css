@@ -10293,20 +10293,9 @@ html, body {
   width: 100%;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+:root {
+  --color-green-light: rgba(244, 248, 243, 0.7);
+  --color-green-white: rgb(219, 237, 219);
+  --color-green-dark: rgb(108, 155, 125);
+  --color-green-text: rgb(28, 56, 41);
 }/*# sourceMappingURL=styles.css.map */

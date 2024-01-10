@@ -5,9 +5,19 @@
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
       <div class="board-column" *ngFor="let column of board.columns">
-        <div class="column-title">
-          {{ column.name }}
+        
+        <div class="column-head">
+          <span class="column-title">
+            <div class="column-title-content">
+                <div class="column-title-dot"></div>
+                <span class="column-title-text">{{ column.name }}</span>
+            </div>
+          </span>
+          <div class="column-tasks-counter">
+            0
+          </div>
         </div>
+
         <div class="tasks-container"
         cdkDropList
         [cdkDropListData]="column.tasks"
