@@ -32,9 +32,21 @@
         flex-direction: column;
         height: fit-content;
         min-width: 260px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 0 5px 5px 5px;
         border-radius: 5px;
+
+        .new-task-button {
+          display: inline-flex;
+          align-items: center;
+          height: 32px;
+          gap: 6px;
+          padding-left: 6px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+        .new-task-button:hover {
+          background: rgba(55, 53, 47, 0.08);
+        }
 
         .column-head {
           display: flex;
