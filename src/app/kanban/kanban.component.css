@@ -155,11 +155,48 @@
 
 .cdk-drag-preview {
   display: flex;
-  padding: 15px 12px;
-  box-sizing: border-box;
+  min-height: 40px;
+  margin-bottom: 5px;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.cdk-drag-preview .tasks-content {
+  display: flex;
+  padding: 8px 10px 6px 6px;
+}
+.cdk-drag-preview .tasks-content .tasks-content-icon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: background 20ms ease-in 0s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  margin-left: 0px;
+  margin-right: 2px;
+  padding: 2px;
+  float: left;
+}
+.cdk-drag-preview .tasks-content .tasks-content-text {
+  max-width: 100%;
+  width: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 21px;
+  font-weight: 500;
+  flex-grow: 1;
+  padding: 2px;
+  pointer-events: none;
 }
 
 .cdk-drag-placeholder {
