@@ -21,7 +21,7 @@
           <div class="column-title-right-content">
             <div class="column-title-hover-content">
               <div class="column-add-task-button">
-                <i class="fa-solid fa-plus" style="color: #91918e;"></i>
+                <i class="fa-solid fa-plus" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}"></i>
               </div>
             </div>
           </div>

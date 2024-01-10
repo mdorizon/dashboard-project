@@ -10,7 +10,7 @@ import { Column } from '../models/column.model';
 
 })
 export class KanbanComponent {
-  
+
   board: Board = new Board('Test board', [
     new Column('Ideas', [
       "Some random idea",
@@ -24,7 +24,7 @@ export class KanbanComponent {
       'Go home',
       'Fall asleep'
     ],
-    'green'),
+    'brown'),
     new Column('Done', [
       'Get up',
       'Brush teeth',
@@ -32,7 +32,25 @@ export class KanbanComponent {
       'Check e-mail',
       'Walk dog'
     ],
-    'orange')
+    'orange'),
+    new Column('Done', [
+    ],
+    'yellow'),
+    new Column('Done', [
+    ],
+    'green'),
+    new Column('Done', [
+    ],
+    'blue'),
+    new Column('Done', [
+    ],
+    'purple'),
+    new Column('Done', [
+    ],
+    'pink'),
+    new Column('Done', [
+    ],
+    'red')
   ]);
 
   drop(event: CdkDragDrop<string[]>) {

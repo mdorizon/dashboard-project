@@ -1,16 +1,15 @@
 .board {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  height: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  flex-direction: column;
+  height: 100%;
 }
 .board .board-bar {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: rgba(128, 128, 128, 0.5);
   padding: 8px 15px;
 }
@@ -21,21 +20,19 @@
 }
 .board .board-wrapper {
   display: flex;
-  width: 100%;
-  overflow-x: auto;
+  height: 100%;
+  overflow-x: overlay;
 }
 .board .board-wrapper .board-columns {
   display: flex;
   gap: 16px;
-  width: 100%;
+  padding: 16px;
 }
 .board .board-wrapper .board-columns .board-column {
   display: flex;
   flex-direction: column;
   height: -moz-fit-content;
   height: fit-content;
-  margin-left: 16px;
-  margin-top: 16px;
   min-width: 260px;
   padding-left: 5px;
   padding-right: 5px;
@@ -44,16 +41,16 @@
 .board .board-wrapper .board-columns .board-column .column-head {
   display: flex;
   align-items: center;
-  height: 34px;
   justify-content: space-between;
+  height: 34px;
 }
 .board .board-wrapper .board-columns .board-column .column-head .column-title-left-content {
   display: flex;
 }
-.board .board-wrapper .board-columns .board-column .column-head .column-title {
+.board .board-wrapper .board-columns .board-column .column-head .column-title-left-content .column-title {
   font-weight: 500;
 }
-.board .board-wrapper .board-columns .board-column .column-head .column-title .column-title-content {
+.board .board-wrapper .board-columns .board-column .column-head .column-title-left-content .column-title .column-title-content {
   display: inline-flex;
   align-items: center;
   height: 20px;
@@ -61,14 +58,14 @@
   padding-left: 7px;
   padding-right: 9px;
 }
-.board .board-wrapper .board-columns .board-column .column-head .column-title .column-title-content .column-title-dot {
+.board .board-wrapper .board-columns .board-column .column-head .column-title-left-content .column-title .column-title-content .column-title-dot {
   margin-right: 5px;
   border-radius: 99px;
   height: 8px;
   width: 8px;
   display: inline-flex;
 }
-.board .board-wrapper .board-columns .board-column .column-head .column-tasks-counter {
+.board .board-wrapper .board-columns .board-column .column-head .column-title-left-content .column-tasks-counter {
   display: flex;
   padding-top: 2px;
   padding-left: 8px;
@@ -94,9 +91,6 @@
   opacity: 1;
 }
 
-.tasks-container {
-  flex-grow: 1;
-}
 .tasks-container .task {
   display: flex;
   padding: 15px 12px;
@@ -107,12 +101,15 @@
   cursor: pointer;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.05), 0 3px 14px 2px rgba(0, 0, 0, 0.05);
 }
+.tasks-container .task:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
 
 .cdk-drag-preview {
   display: flex;
   padding: 15px 12px;
   box-sizing: border-box;
-  background: white;
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
@@ -127,4 +124,14 @@
 
 .tasks-container.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.board-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 9px;
+  background-color: #EDECE9;
+}
+
+.board-wrapper::-webkit-scrollbar-thumb {
+  background: #D3D1CB;
 }/*# sourceMappingURL=kanban.component.css.map */
