@@ -7,7 +7,8 @@ import { Todo } from './todo.model'
 export class DataService {
   
   todos: Todo[] = [
-    new Todo('this is a test')
+    new Todo('this is a test'),
+    new Todo('Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.')
   ]
 
   constructor() { }
@@ -18,11 +19,11 @@ getAllTodos() {
 }
 
 addTodo(todo: Todo){
-  this.todo.push(todo)
+  this.todos.push(todo)
 }
 
 updateTodo(index: number, updateTodo: Todo){
-  this.todos[index] = updatedTodo
+  this.todos[index] = updateTodo
 }
 
 deleteTodo(index: number) {
