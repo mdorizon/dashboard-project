@@ -10293,15 +10293,8 @@ html, body {
   width: 100%;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-<<<<<<< HEAD
-=======
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  padding: 15px;
 }
 
 html, body {
@@ -10311,5 +10304,13 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
->>>>>>> bca0f75f825aed4cf93760cc3b4a7158b698c16e
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }/*# sourceMappingURL=styles.css.map */

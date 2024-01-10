@@ -1,5 +1,10 @@
 @import '../node_modules/bulma/bulma.sass';
 @import '../src/_main-styles.scss';
+
+.mat-mdc-dialog-container .mdc-dialog__surface{
+    padding: 15px;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html, body { height: 100%; }

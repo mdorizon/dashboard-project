@@ -53,11 +53,6 @@
 .tasks-container .task {
   display: flex;
   padding: 15px 12px;
-<<<<<<< HEAD
-  background-color: white;
-  margin-bottom: 15px;
-  border-radius: 4px;
-=======
   background: white;
   border-bottom: solid 1px #ddd;
   border-radius: 4px;
@@ -85,5 +80,4 @@
 
 .tasks-container.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
->>>>>>> bca0f75f825aed4cf93760cc3b4a7158b698c16e
 }/*# sourceMappingURL=kanban.component.css.map */
