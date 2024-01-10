@@ -84,10 +84,12 @@
           }
 
           .column-title-hover-content {
+            display: flex;
             opacity: 0;
             transition: opacity 100ms ease-in-out 0s;
 
-            .column-add-task-button {
+            .column-add-task-button,
+            .column-settings-task-button {
               display: flex;
               align-items: center;
               justify-content: center;
@@ -95,8 +97,12 @@
               width: 24px;
               border-radius: 4px;
               cursor: pointer;
+              i {
+              font-size: 21px !important;
+              }
             }
-            .column-add-task-button:hover {
+            .column-add-task-button:hover,
+            .column-settings-task-button:hover {
               background: rgba(55, 53, 47, 0.08);
             }
           }

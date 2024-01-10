@@ -20,6 +20,9 @@
           </div>
           <div class="column-title-right-content">
             <div class="column-title-hover-content">
+              <div class="column-settings-task-button">
+                <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}" >more_horiz</i>
+              </div>
               <div class="column-add-task-button">
                 <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}" >add</i>
               </div>
@@ -40,7 +43,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="new-task-button">
           <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)', 'font-size': '21px'}" >add</i>
           <p [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">Nouveau</p>

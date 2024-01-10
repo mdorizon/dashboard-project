@@ -84,10 +84,12 @@
   align-items: center;
 }
 .board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content {
+  display: flex;
   opacity: 0;
   transition: opacity 100ms ease-in-out 0s;
 }
-.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button {
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button,
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-settings-task-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,7 +98,12 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button:hover {
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button i,
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-settings-task-button i {
+  font-size: 21px !important;
+}
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button:hover,
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-settings-task-button:hover {
   background: rgba(55, 53, 47, 0.08);
 }
 .board .board-wrapper .board-columns .board-column:hover .column-head .column-title-hover-content {
