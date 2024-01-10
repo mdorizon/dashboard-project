@@ -22,7 +22,6 @@
 .board .board-wrapper {
   display: flex;
   width: 100%;
-  height: 100%;
   overflow-x: auto;
 }
 .board .board-wrapper .board-columns {
@@ -33,6 +32,8 @@
 .board .board-wrapper .board-columns .board-column {
   display: flex;
   flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-left: 16px;
   margin-top: 16px;
   min-width: 260px;

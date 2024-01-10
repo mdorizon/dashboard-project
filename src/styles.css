@@ -10293,6 +10293,10 @@ html, body {
   width: 100%;
 }
 
+app-kanban-page {
+  width: 100%;
+}
+
 :root {
   --color-green-light: rgba(244, 248, 243, 0.7);
   --color-green-white: rgb(219, 237, 219);
