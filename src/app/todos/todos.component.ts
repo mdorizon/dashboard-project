@@ -32,4 +32,8 @@ export class TodosComponent implements OnInit{
 
     form.reset()
   }
+
+  toggleCompelted(todo: Todo) {
+    todo.completed = !todo.completed;
+  }
 }
