@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { ServerModule } from '@angular/platform-server';
 
 import { AppModule } from './app.module';
-import { AppComponent } from './pages/home/app.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
