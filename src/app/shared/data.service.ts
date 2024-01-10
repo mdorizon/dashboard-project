@@ -7,8 +7,8 @@ import { Todo } from './todo.model'
 export class DataService {
   
   todos: Todo[] = [
-    new Todo('this is a test!', false),
-    new Todo('Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.', true)
+    new Todo('Espace insécable = &nbsp;', true),
+    new Todo('Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.', false)
   ]
 
   constructor() { }
