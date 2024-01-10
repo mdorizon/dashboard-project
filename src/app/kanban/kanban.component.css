@@ -38,6 +38,7 @@
   margin-top: 16px;
   min-width: 260px;
   padding-left: 5px;
+  padding-right: 5px;
   background-color: var(--color-green-light);
   border-radius: 5px;
 }
@@ -45,6 +46,10 @@
   display: flex;
   align-items: center;
   height: 34px;
+  justify-content: space-between;
+}
+.board .board-wrapper .board-columns .board-column .column-head .column-title-left-content {
+  display: flex;
 }
 .board .board-wrapper .board-columns .board-column .column-head .column-title {
   font-weight: 500;
@@ -76,6 +81,25 @@
   padding-left: 8px;
   align-items: center;
   color: var(--color-green-dark);
+}
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content {
+  opacity: 0;
+  transition: opacity 100ms ease-in-out 0s;
+}
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.board .board-wrapper .board-columns .board-column .column-head .column-title-hover-content .column-add-task-button:hover {
+  background: rgba(55, 53, 47, 0.08);
+}
+.board .board-wrapper .board-columns .board-column:hover .column-head .column-title-hover-content {
+  opacity: 1;
 }
 
 .tasks-container {

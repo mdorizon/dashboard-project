@@ -7,14 +7,23 @@
       <div class="board-column" *ngFor="let column of board.columns">
         
         <div class="column-head">
-          <span class="column-title">
-            <div class="column-title-content">
-                <div class="column-title-dot"></div>
-                <span class="column-title-text">{{ column.name }}</span>
+          <div class="column-title-left-content">
+            <span class="column-title">
+              <div class="column-title-content">
+                  <div class="column-title-dot"></div>
+                  <span class="column-title-text">{{ column.name }}</span>
+              </div>
+            </span>
+            <div class="column-tasks-counter">
+              {{ column.tasks.length }}
             </div>
-          </span>
-          <div class="column-tasks-counter">
-            {{ column.tasks.length }}
+          </div>
+          <div class="column-title-right-content">
+            <div class="column-title-hover-content">
+              <div class="column-add-task-button">
+                <i class="fa-solid fa-plus" style="color: #91918e;"></i>
+              </div>
+            </div>
           </div>
         </div>
 

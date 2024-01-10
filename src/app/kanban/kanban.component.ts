@@ -16,20 +16,23 @@ export class KanbanComponent {
       "Some random idea",
       "This is another random idea",
       "build an awesome application"
-    ]),
+    ],
+    'gray'),
     new Column('Todo', [
       'Get to work',
       'Pick up groceries',
       'Go home',
       'Fall asleep'
-    ]),
+    ],
+    'green'),
     new Column('Done', [
       'Get up',
       'Brush teeth',
       'Take a shower',
       'Check e-mail',
       'Walk dog'
-    ])
+    ],
+    'orange')
   ]);
 
   drop(event: CdkDragDrop<string[]>) {
