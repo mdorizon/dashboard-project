@@ -4,17 +4,17 @@
   </div>
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
-      <div class="board-column" *ngFor="let column of board.columns" style="background-color: var(--color-{{ column.color }}-light);">
+      <div class="board-column" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
 
         <div class="column-head">
           <div class="column-title-left-content">
             <span class="column-title">
-              <div class="column-title-content" style="background: var(--color-{{ column.color }}-white); color: var(--color-{{ column.color }}-text);">
-                  <div class="column-title-dot" style="background-color: var(--color-{{ column.color }}-dark);"></div>
-                  <span class="column-title-text" style="color: var(--color-{{ column.color }}-text);">{{ column.name }}</span>
+              <div class="column-title-content" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-white)', 'color': 'var(--color-' + column.color + '-text)'}">
+                  <div class="column-title-dot" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-dark)'}"></div>
+                  <span class="column-title-text" [ngStyle]="{'color': 'var(--color-' + column.color + '-text)'}">{{ column.name }}</span>
               </div>
             </span>
-            <div class="column-tasks-counter" style="color: var(--color-{{ column.color }}-dark); ">
+            <div class="column-tasks-counter" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">
               {{ column.tasks.length }}
             </div>
           </div>
