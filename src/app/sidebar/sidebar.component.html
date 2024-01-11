@@ -1,0 +1,24 @@
+<div class="sidebar" [ngClass]="collapsed ? 'sidebar-collapsed': ''">
+    <div class="logo-container">
+        <button class="material-symbols-outlined logo" (click)="toggleCollapse()" >bolt</button>
+        <div class="logo-text" *ngIf="collapsed">BOLT</div>
+        <button class="material-icons btn-close" *ngIf="collapsed" (click)="closeSidebar()">close</button>
+    </div>
+
+    <div class="list-items">
+        <a routerLink="/" class="list-item">
+            <i class="material-symbols-outlined">home</i>
+            <span *ngIf="collapsed">Home</span>
+        </a>
+        <a routerLink="/kanban" class="list-item">
+            <i class="material-symbols-outlined">view_kanban</i>
+            <span *ngIf="collapsed">Projects</span>
+        </a>
+        <a routerLink="" class="list-item">
+            <i class="material-symbols-outlined">explore</i>
+            <span *ngIf="collapsed">Explore</span>
+        </a>
+        
+    </div>
+
+</div>
