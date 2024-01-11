@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
+import { CdkDragStart, CdkDragMove, CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { Board } from '../models/board.model';
 import { Column } from '../models/column.model';
 import { Task } from '../models/task.model';
@@ -11,7 +11,7 @@ import { Task } from '../models/task.model';
 })
 export class KanbanComponent {
 
-  board: Board = new Board('Test board', [
+  board: Board = new Board('Développement', '💻',[
     new Column(
     'Ideas',
     [

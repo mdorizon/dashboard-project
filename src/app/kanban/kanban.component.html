@@ -1,7 +1,83 @@
 <div class="board">
-  <div class="board-bar">
-    <p class="board-name">{{ board.name }}</p>
+
+  <div class="board-header">
+    <div class="board-header-title-container">
+      <h1 class="title-icon">
+        {{ board.icon }}
+      </h1>
+      <h1 class="title-text" contenteditable="true">
+        {{ board.name }}
+      </h1>
+    </div>
+
+    <div class="board-control-bar">
+      <div>
+        
+        <span class="board-title-text">
+          Tableau des mises à jour
+        </span>
+      </div>
+    </div>
+
   </div>
+
+  <div contenteditable="false" data-content-editable-void="true" style="min-height: 40px; padding-left: 96px; padding-right: 96px; flex-shrink: 0; position: sticky; z-index: 86; left: 0px;">
+    <div data-block-id="0a5e3952-50e0-49c4-bdab-3523cdc03e3d" class="notion-selectable notion-collection_view_page-block">
+      <div style="display: flex; align-items: center; height: 40px; left: 96px; width: 100%; box-shadow: rgb(233, 233, 231) 0px -1px 0px inset;">
+        <div role="tablist" style="display: flex; align-items: center; height: 100%; flex-grow: 1;">
+          <div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; flex-shrink: 0; white-space: nowrap; height: 28px; border-radius: 4px; font-size: 14px; line-height: 1.2; min-width: 0px; padding-left: 8px; color: rgb(55, 53, 47); font-weight: 600; max-width: 220px;">
+            <div style="width: 16px; height: 16px; transform: scale(1.2); mask: url(&quot;/icons/skip-forward_gray.svg?mode=light&quot;) center center no-repeat; background-color: rgb(55, 53, 47); fill: rgb(55, 53, 47); margin-right: 6px;">
+            </div>
+            <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-right: 6px; margin-top: 1px;">
+              Tableau des mises à jour
+            </span>
+            <svg role="graphics-symbol" viewBox="0 0 30 30" class="chevronDown" style="width: 10px; height: 10px; display: block; fill: rgba(55, 53, 47, 0.35); flex-shrink: 0; margin-top: 2px; margin-right: 6px;">
+              <polygon points="15,17.4 4.8,7 2,9.8 15,23 28,9.8 25.2,7 ">
+
+              </polygon>
+            </svg>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 2px; opacity: 1;">
+          <div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; flex-shrink: 0; white-space: nowrap; height: 28px; border-radius: 4px; font-size: 14px; line-height: 1; min-width: 0px; padding: 6px; color: rgba(55, 53, 47, 0.65); font-weight: 400;">
+            Filtrer
+          </div>
+          <div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; flex-shrink: 0; white-space: nowrap; height: 28px; border-radius: 4px; font-size: 14px; line-height: 1; min-width: 0px; padding: 6px; color: rgb(35, 131, 226); font-weight: 400;">
+            Trier
+          </div>
+          <div role="button" tabindex="0" class="notion-collection-automation-edit-view" aria-label="Créer et afficher des automatisations" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 4px; height: 28px; width: 28px; padding: 6px; font-size: 14px; color: rgba(55, 53, 47, 0.65); fill: rgba(55, 53, 47, 0.45); font-weight: 400; line-height: 1;">
+            <svg role="graphics-symbol" viewBox="0 0 14 22" class="boltFilled" style="height: 14px; display: block; fill: rgba(55, 53, 47, 0.65); flex-shrink: 0;">
+              <path d="M0 12.117c0 .38.293.664.703.664h5.518l-2.91 7.91c-.381 1.006.664 1.543 1.318.723l8.877-11.094c.166-.205.254-.4.254-.625 0-.371-.293-.664-.703-.664H7.539l2.91-7.91C10.83.115 9.785-.422 9.131.408L.254 11.492c-.166.215-.254.41-.254.625z">
+
+              </path>
+            </svg>
+          </div>
+          <div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 4px; height: 28px; width: 28px; padding: 6px; font-size: 14px; color: rgba(55, 53, 47, 0.65); fill: rgba(55, 53, 47, 0.45); font-weight: 400; line-height: 1;">
+            <svg role="graphics-symbol" viewBox="0 0 16 16" class="collectionSearch" style="width: 14px; display: block; fill: rgba(55, 53, 47, 0.65); flex-shrink: 0;">
+              <path d="M0 6.35938C0 9.86719 2.85156 12.7188 6.35938 12.7188C7.66406 12.7188 8.85938 12.3203 9.85938 11.6406L13.4531 15.2344C13.6719 15.4609 13.9766 15.5625 14.2812 15.5625C14.9453 15.5625 15.4219 15.0625 15.4219 14.4141C15.4219 14.1016 15.3125 13.8125 15.1016 13.5938L11.5312 10.0156C12.2734 8.99219 12.7188 7.72656 12.7188 6.35938C12.7188 2.85156 9.86719 0 6.35938 0C2.85156 0 0 2.85156 0 6.35938ZM1.65625 6.35938C1.65625 3.76562 3.75781 1.65625 6.35938 1.65625C8.95312 1.65625 11.0625 3.76562 11.0625 6.35938C11.0625 8.95312 8.95312 11.0625 6.35938 11.0625C3.75781 11.0625 1.65625 8.95312 1.65625 6.35938Z"></path>
+            </svg>
+          </div>
+          <div>
+            <div role="button" tabindex="0" class="notion-collection-edit-view" aria-label="Modifier le groupement, la disposition des vues, etc." style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 4px; height: 28px; width: 28px; padding: 6px; font-size: 14px; color: rgba(55, 53, 47, 0.65); fill: rgba(55, 53, 47, 0.45); font-weight: 400; line-height: 1;">
+              <svg role="graphics-symbol" viewBox="0 0 13 3" class="dots" style="height: 3px; display: block; fill: rgba(55, 53, 47, 0.65); flex-shrink: 0;"><g><path d="M3,1.5A1.5,1.5,0,1,1,1.5,0,1.5,1.5,0,0,1,3,1.5Z"></path>
+                <path d="M8,1.5A1.5,1.5,0,1,1,6.5,0,1.5,1.5,0,0,1,8,1.5Z"></path><path d="M13,1.5A1.5,1.5,0,1,1,11.5,0,1.5,1.5,0,0,1,13,1.5Z"></path>
+              </g>
+              </svg>
+            </div>
+          </div>
+          <div class="notion-collection-view-item-add" style="position: relative; display: inline-flex; flex-shrink: 0; border-radius: 4px; overflow: hidden; height: 28px; margin-left: 8px; font-size: 14px;">
+            <div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; white-space: nowrap; border-top-left-radius: 4px; border-bottom-left-radius: 4px; padding-left: 8px; padding-right: 8px; font-weight: 500; background: rgb(35, 131, 226); color: white;">
+              Nouveau
+            </div>
+            <div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 24px; align-self: stretch; border-top-right-radius: 4px; border-bottom-right-radius: 4px; background: rgb(35, 131, 226); color: white; box-shadow: rgba(55, 53, 47, 0.16) 1px 0px 0px inset;">
+              <svg role="graphics-symbol" viewBox="0 0 30 30" class="chevronDown" style="width: 10px; height: 100%; display: block; fill: white; flex-shrink: 0; margin-top: 2px;"><polygon points="15,17.4 4.8,7 2,9.8 15,23 28,9.8 25.2,7 "></polygon>
+              </svg>
+            </div>
+            <div style="position: absolute; pointer-events: none; border-radius: 4px; inset: 0px; box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px inset, rgba(15, 15, 15, 0.1) 0px 1px 2px;">
+            </div></div></div></div></div><div style="left: 96px; width: 100%;">
+            </div>
+          </div>
+
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
       <div class="board-column" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
