@@ -15,7 +15,7 @@ export class SidebarComponent {
   sideData = sidebarData
 
   toggleCollapse(): void{
-    this.collapsed= !this.collapsed
+    this.collapsed= true
   }
 
   closeSidebar(): void{

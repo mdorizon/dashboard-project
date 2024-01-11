@@ -2,9 +2,7 @@
     height: 100vh;
     width: 5rem;
     border-right: 1px solid #eee;
-    transition: all .5s ease;
-    position: fixed;
-    z-index: 1;
+    transition: all .1s ease;
     top: 0;
     background: white;
 
@@ -46,6 +44,7 @@
 
 .sidebar-collapsed{
     width: 16.5rem;
+    transition: all .1s;
 }
 
 .list-items{

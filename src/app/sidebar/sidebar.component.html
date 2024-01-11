@@ -2,7 +2,7 @@
     <div class="logo-container">
         <button class="material-symbols-outlined logo" (click)="toggleCollapse()" >bolt</button>
         <div class="logo-text" *ngIf="collapsed">BOLT</div>
-        <button class="material-icons btn-close" *ngIf="collapsed" (clcik)="toggleCollapse">close</button>
+        <button class="material-icons btn-close" *ngIf="collapsed" (click)="closeSidebar()">close</button>
     </div>
 
     <div class="list-items">
