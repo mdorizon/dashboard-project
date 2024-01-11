@@ -1,0 +1,27 @@
+.sidebar{
+    height: 100%;
+    width: 300px;
+}
+
+.list-items{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+
+    .list-item {
+        display: flex;
+        font-size: 18px;
+        padding: 10px 20px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .list-item:hover{
+        color: orange;
+    }
+
+    i.material-icons {
+        margin-right: 20px;
+        font-size: 24px;
+    }
+}
