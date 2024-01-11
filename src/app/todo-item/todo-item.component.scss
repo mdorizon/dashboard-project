@@ -1,49 +1,259 @@
-.todo-item{
-    position: relative;
+// .todo-item{
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     font-size: 18px;
+//     padding: 20px 15px;
+//     margin-bottom: 20px;
+//     border-bottom: 1px solid #f2f3f5;
+//     cursor: pointer;
+
+//     &.completed {
+//         color: #aaa;
+//     }
+
+//     .check-box{
+//         display: flex;
+//         flex-shrink: 0;
+
+//         border: 2px solid #eee;
+//         border-radius: 50%;
+//         height: 28px;
+//         width: 28px;
+//         margin-right: 20px;
+//         transition: background-color 0.2s, border-color 0.2s;
+
+//         i.material-icons{
+//             font-size: 20px;
+//             margin: auto;
+//             color: #333;
+
+//             //hide by default
+//             opacity: 0;
+
+//             transition: opacity 0.2s;
+//         }
+//     }
+// }
+
+// .todo-item:hover .check-box {
+//     background: #eee;
+//     i.material-icons{
+//         opacity: 0.28;
+//     }
+// }
+
+// .todo-item.completed .check-box {
+//     background: rgb(11, 223, 170);
+//     border-color: rgb(11, 223, 170) ;
+
+//     i.material-icons{
+//         opacity: 1;
+//     }
+// }
+
+// .todo-item .todo-controls-box{
+//     display: flex;
+//     position: absolute;
+//     bottom: 0;
+//     right: 5px;
+
+//     //hide by default
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(2px);
+//     transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+// }
+
+// .todo-item:hover .todo-controls-box{
+//     opacity: 1;
+//     visibility: visible;
+
+//     transform: translateY(0);
+//     transition-delay: 0.3s;
+// }
+
+// .todo-controls-box .todo-control-button{
+//     display: flex;
+//     background-color: #f5f7f8;
+//     padding: 6px 7px;
+
+//     i.material-icons{
+//         font-size: 18px;
+//         color: #555;
+        
+//     }
+
+//     &:hover{
+//         background: #eee;
+
+//         i.material-icons{
+//             color: #333;
+//         }
+//     }
+
+//     &:active{
+//         background: #e5e7e8;
+//     }
+
+//     &:first-of-type{
+//         border-top-left-radius: 7px;
+//     }
+
+//     &:last-of-type{
+//         border-top-right-radius: 7px;
+//     }
+// }
+
+// .todo-controls-box .todo-control-button.is-danger:hover i.material-icons{
+//     color: rgb(219, 38, 38);
+// }
+
+// .todo-controls-box .todo-control-button.is-danger:active i.material-icons{
+//     color: rgb(255, 40, 40);
+// }
+
+
+
+.tasks-container {
+  min-height: 10px;
+
+  .check-box {
     display: flex;
-    align-items: center;
-    font-size: 18px;
-    padding: 20px 15px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #f2f3f5;
+    flex-shrink: 0;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    margin-right: 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+  
+    i.material-icons{
+        font-size: 20px;
+        margin: auto;
+        color: #333;
+  
+        //hide by default
+        opacity: 0;
+  
+        transition: opacity 0.2s;
+    }
+  }
+
+
+  .task {
+    display: flex;
+    min-height: 40px;
+    margin-bottom: 5px;
+    background: white;
     cursor: pointer;
+    border-radius: 4px;
+    box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px, rgba(15, 15, 15, 0.05) 0px 2px 4px;
 
-    &.completed {
-        color: #aaa;
-    }
+    .tasks-content {
+      display: flex;
+      position: relative;
+      width: 100%;
+      padding: 8px 10px 6px 6px;
 
-    .check-box{
-        display: flex;
-        flex-shrink: 0;
+      .tasks-content-buttons {
+        box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px; 
+        background: white;
+        display: flex; 
+        border-radius: 4px; 
+        max-width: calc(100% - 16px); 
+        min-height: 24px; overflow: hidden;
+        opacity: 0; 
+        position: absolute; 
+        right: 8px; 
+        z-index: 2; 
+        top: 8px; 
+        transition-property: opacity; 
+        transition-duration: 270ms; 
+        transition-timing-function: ease;
+      }
+      .task-edit-button {
+        transition: background 20ms ease-in 0s; 
+        cursor: pointer; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 4px 6px; 
+        border-right: 1px solid rgba(55, 53, 47, 0.09); 
+        font-weight: 500; 
+        color: rgba(55, 53, 47, 0.65); 
+        fill: rgba(55, 53, 47, 0.65);
 
-        border: 2px solid #eee;
-        border-radius: 50%;
-        height: 28px;
-        width: 28px;
-        margin-right: 20px;
-        transition: background-color 0.2s, border-color 0.2s;
-
-        i.material-icons{
-            font-size: 20px;
-            margin: auto;
-            color: #333;
-
-            //hide by default
-            opacity: 0;
-
-            transition: opacity 0.2s;
+        i {
+          font-size: 16px !important;
         }
+      }
+      .task-edit-button:hover {
+        background: rgba(55, 53, 47, 0.08)
+      }
+      .task-settings-button {
+        transition: background 20ms ease-in 0s; 
+        cursor: pointer; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 2px 4px; 
+        border-right: none; 
+        font-weight: 500; 
+        color: rgba(55, 53, 47, 0.65); 
+        fill: rgba(55, 53, 47, 0.65);
+
+        i {
+          font-size: 18px !important;
+        }
+      }
+      .task-settings-button:hover {
+        background: rgba(55, 53, 47, 0.08)
+      }
+
+      .tasks-content-icon {
+        transition: background 20ms ease-in 0s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        min-width: 24px;
+        border-radius: 5px;
+      }
+      .tasks-content-icon:hover {
+        background-color: rgba(55, 53, 47, 0.08);
+      }
+      .tasks-content-text {
+        max-width: 100%;
+        width: auto;
+        word-break: break-word;
+        font-size: 14px;
+        line-height: 1.5;
+        min-height: 21px;
+        font-weight: 500;
+        padding: 2px;
+      }
     }
+  }
+  .task:hover {
+    background-color: rgba(55, 53, 47, 0.04);
+
+    .tasks-content-buttons {
+      opacity: 1 !important;
+    }
+  }
+
 }
 
-.todo-item:hover .check-box {
+.tasks-content-text:hover .check-box {
     background: #eee;
     i.material-icons{
         opacity: 0.28;
     }
 }
 
-.todo-item.completed .check-box {
+.tasks-content.completed .check-box {
     background: rgb(11, 223, 170);
     border-color: rgb(11, 223, 170) ;
 
@@ -52,63 +262,77 @@
     }
 }
 
-.todo-item .todo-controls-box{
+// drag tasks
+.cdk-drag-preview {
+  display: flex;
+  min-height: 40px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  .tasks-content {
     display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 5px;
-
-    //hide by default
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(2px);
-    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+    padding: 8px 10px 6px 6px;
+    .tasks-content-icon {
+      transition: background 20ms ease-in 0s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      width: 24px;
+      border-radius: 5px;
+    }
+    .tasks-content-text {
+      max-width: 100%;
+      width: auto;
+      word-break: break-word;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 21px;
+      font-weight: 500;
+      padding: 2px;
+    }
+  }
+}
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.tasks-container.cdk-drop-list-dragging .task:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.cdk-drop-list-dragging {
+  .task:hover {
+    background-color: white !important;
+  }
+  .column-head .column-title-hover-content {
+    opacity: 0 !important;
+  }
+  .new-task-button:hover {
+    background: transparent !important;
+  }
+  .cdk-drag	 {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+.dragging-placeholder {
+  background-color: #9AC7F0;
+  position: relative;
+  z-index: 100;
+  height: 4px;
+  margin: -2px 0;
 }
 
-.todo-item:hover .todo-controls-box{
-    opacity: 1;
-    visibility: visible;
-
-    transform: translateY(0);
-    transition-delay: 0.3s;
+// Scrollbar
+.board-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 9px;
+  background-color: #EDECE9;
 }
-
-.todo-controls-box .todo-control-button{
-    display: flex;
-    background-color: #f5f7f8;
-    padding: 6px 7px;
-
-    i.material-icons{
-        font-size: 18px;
-        color: #555;
-        
-    }
-
-    &:hover{
-        background: #eee;
-
-        i.material-icons{
-            color: #333;
-        }
-    }
-
-    &:active{
-        background: #e5e7e8;
-    }
-
-    &:first-of-type{
-        border-top-left-radius: 7px;
-    }
-
-    &:last-of-type{
-        border-top-right-radius: 7px;
-    }
+.board-wrapper::-webkit-scrollbar-thumb {
+  background: #D3D1CB;
 }
-
-.todo-controls-box .todo-control-button.is-danger:hover i.material-icons{
-    color: rgb(219, 38, 38);
-}
-
-.todo-controls-box .todo-control-button.is-danger:active i.material-icons{
-    color: rgb(255, 40, 40);
-}
+  

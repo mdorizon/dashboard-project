@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { Todo } from '../shared/todo.model';
+import { Column } from '../models/column.model';
+import { Board } from '../models/board.model';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 @Component({
@@ -30,6 +33,28 @@ export class TodoItemComponent implements OnInit{
 
   onDeleteClicked(){
     this.deleteClicked.emit()
+  }
+
+  board: Board = new Board('Test board', [
+    new Column('Todo List', [
+      "Some random idea",
+      "This is another random ideaThis is another random ideaThis is another random ideaThis is another random idea",
+      "build an awesome application"
+    ],
+    'red')
+  ]);
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
 
 }

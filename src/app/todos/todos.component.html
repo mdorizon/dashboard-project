@@ -1,10 +1,8 @@
 <section class="todos-container">
-    <!-- 
     
-    <div class="container add-todo-box-container">
+     <div class="board-column" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
         <div class="add-todo-box">
             <form #form="ngForm" autocomplete="off" (ngSubmit)="onFormSubmit(form)">
-                <h2 class="title is-5"> New Todo</h2>
         
                 <div class="field is-grouped my-0">
                     <p class="control is-expanded">
@@ -24,9 +22,32 @@
                   </div>
             </form>
         </div>
-    </div>
+        <div class="column-head">
+          <div class="column-title-left-content">
+            <span class="column-title">
+              <div class="column-title-content" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-tag)', 'color': 'var(--color-' + column.color + '-text)'}">
+                  <div class="column-title-dot" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-dark)'}"></div>
+                  <span class="column-title-text" [ngStyle]="{'color': 'var(--color-' + column.color + '-text)'}">{{ column.name }}</span>
+              </div>
+            </span>
+            <div class="column-tasks-counter" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">
+              {{ column.tasks.length }}
+            </div>
+          </div>
+          <div class="column-title-right-content">
+            <div class="column-title-hover-content">
+              <div class="column-settings-task-button">
+                <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}" >more_horiz</i>
+              </div>
+              <div class="column-add-task-button">
+                <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}" >add</i>
+              </div>
+            </div>
+          </div>
+        </div>
     
-    <section class="section">
+    
+ 
         <div class="container">
             <div class="todos-list">
                 
@@ -40,8 +61,14 @@
     
             </div>
         </div>
-    </section> -->
-          <div class="board-column" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
+        <div class="new-task-button" *ngFor="let column of board.columns">
+          <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)', 'font-size': '21px'}" >add</i>
+          <p [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">Nouveau</p>
+          
+        </div>
+      </div>
+
+          <!-- <div class="board-column" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
     
             <div class="column-head">
               <div class="column-title-left-content">
@@ -95,6 +122,6 @@
               <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)', 'font-size': '21px'}" >add</i>
               <p [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">Nouveau</p>
             </div>
-          </div>
+          </div> -->
 </section>
 

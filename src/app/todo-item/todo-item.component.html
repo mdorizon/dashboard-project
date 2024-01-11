@@ -1,4 +1,31 @@
-<div class="todo-item" (click)="onTodoClicked()" [class.completed]="todo.completed"> 
+<div class="tasks-container" cdkDropListGroup *ngFor="let column of board.columns" [cdkDropListData]="column.tasks" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div class="task"  cdkDrag>
+    <div class="dragging-placeholder" *cdkDragPlaceholder></div>
+    <div class="tasks-content" (click)="onTodoClicked()" [class.completed]="todo.completed">
+      <!-- <div class="tasks-content-icon">
+        <p>🦖</p>
+      </div> -->
+      <div class="check-box">
+        <i class="material-icons">check</i>
+    </div>
+      <div class="tasks-content-text">
+        {{ todo.text }}
+      </div>
+
+      <div class="tasks-content-buttons">
+        <div class="task-edit-button" (click)="onEditClicked()">
+          <i class="material-icons">edit</i>
+        </div>
+        <div class="task-settings-button" (click)="onDeleteClicked()">
+          <i class="material-icons">delete</i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- <div class="todo-item" (click)="onTodoClicked()" [class.completed]="todo.completed"> 
     <div class="check-box">
         <i class="material-icons">check</i>
     </div>
@@ -15,4 +42,4 @@
             <i class="material-icons">delete</i>
         </div>
     </div>
-</div>
+</div> -->
