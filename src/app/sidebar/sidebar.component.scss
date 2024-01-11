@@ -1,8 +1,42 @@
-
 .sidebar{
     height: 100%;
     width: 250px;
     border-right: 1px solid #eee;
+
+    .logo-container{
+        display: flex;
+        align-items: center;
+        padding: 0.9rem 0.9rem 0 0.9rem;
+        width: 100%;
+        gap: 15px;
+
+        .logo{
+            text-align: center;
+            width: 3rem;
+            min-width: 3rem;
+            border-radius: 0.3rem;
+            padding: 0.3rem;
+            background: none;
+            font-size: 50px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .logo-text{
+            margin-left: 1.5rem;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .material-icons.btn-close{
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            background: none;
+            border: none;
+            font-size: 30px;
+        }
+    }
 }
 
 .list-items{

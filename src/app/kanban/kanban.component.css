@@ -5,6 +5,7 @@
           user-select: none;
   flex-direction: column;
   height: 100%;
+  width: 100%;
 }
 .board .board-bar {
   display: flex;
