@@ -1,3 +1,4 @@
+
 .sidebar{
     height: 100%;
     width: 300px;
@@ -9,18 +10,48 @@
     padding-top: 100px;
 
     .list-item {
+        position: relative;
         display: flex;
         font-size: 18px;
         padding: 10px 20px;
-        align-items: center;
+        align-items: flex-end;
         cursor: pointer;
+        color: rgb(65, 62, 62);
     }
 
     .list-item:hover{
-        color: orange;
+        background-color: #eee;
     }
 
-    i.material-icons {
+    // .list-item.selected{
+        
+    // }
+
+    .list-item::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        background: linear-gradient(rgba(236, 72, 140,0.5), rgba(240, 54, 82,0.5));
+
+        // opacity: 0;
+        transform: scaleY(0);
+        transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .list-item.selected::before{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    .list-item:hover::before{
+        opacity: 0.5;
+        transform: scaleY(0.5) scaleX(2);
+    }
+
+    i.material-symbols-outlined {
         margin-right: 20px;
         font-size: 24px;
     }
