@@ -4,7 +4,7 @@
   </div>
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
-      <div class="board-column" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
+      <div class="board-column" cdkDropList  (cdkDropListDropped)="drop($event)" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
 
         <div class="column-head">
           <div class="column-title-left-content">
@@ -14,8 +14,8 @@
                   <span class="column-title-text" [ngStyle]="{'color': 'var(--color-' + column.color + '-text)'}">{{ column.name }}</span>
               </div>
             </span>
-            <div class="column-tasks-counter" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">
-              {{ column.tasks.length }}
+            <div *ngFor="let task of column.tasks" class="column-tasks-counter" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">
+              {{ task.content.length }}
             </div>
           </div>
           <div class="column-title-right-content">
@@ -30,15 +30,15 @@
           </div>
         </div>
 
-        <div class="tasks-container">
-          <div class="task" *ngFor="let item of column.tasks.content" cdkDrag>
+        <div class="tasks-container" *ngFor="let task of column.tasks">
+          <div class="task" *ngFor="let content of task.content; let i = index" cdkDrag>
             <div class="dragging-placeholder" *cdkDragPlaceholder></div>
             <div class="tasks-content">
               <div class="tasks-content-icon">
-                <p>🦖</p>
+                <p>{{ task.icon[i] }}</p>
               </div>
               <div class="tasks-content-text">
-                {{ item }}
+                {{ content }}
               </div>
 
               <div class="tasks-content-buttons">
