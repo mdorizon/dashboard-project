@@ -1,7 +1,5 @@
 <section class="todos-container">
-    <section class="heading-section">
-        <h1 class="title has-text-centered">Title</h1>
-    </section>
+    <!-- 
     
     <div class="container add-todo-box-container">
         <div class="add-todo-box">
@@ -42,6 +40,61 @@
     
             </div>
         </div>
-    </section>
+    </section> -->
+          <div class="board-column" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)" *ngFor="let column of board.columns" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
+    
+            <div class="column-head">
+              <div class="column-title-left-content">
+                <span class="column-title">
+                  <div class="column-title-content" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-tag)', 'color': 'var(--color-' + column.color + '-text)'}">
+                      <div class="column-title-dot" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-dark)'}"></div>
+                      <span class="column-title-text" [ngStyle]="{'color': 'var(--color-' + column.color + '-text)'}">{{ column.name }}</span>
+                  </div>
+                </span>
+                <div class="column-tasks-counter" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">
+                  {{ column.tasks.length }}
+                </div>
+              </div>
+              <div class="column-title-right-content">
+                <div class="column-title-hover-content">
+                  <div class="column-settings-task-button">
+                    <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}" >more_horiz</i>
+                  </div>
+                  <div class="column-add-task-button">
+                    <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}" >add</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="tasks-container">
+              <div class="task" *ngFor="let item of column.tasks" cdkDrag>
+                <div class="dragging-placeholder" *cdkDragPlaceholder></div>
+                <div class="tasks-content">
+                  <div class="tasks-content-icon">
+                    <p>🦖</p>
+                  </div>
+                  <div class="tasks-content-text">
+                    {{ item }}
+                  </div>
+    
+                  <div class="tasks-content-buttons">
+                    <div class="task-edit-button">
+                      <i class="material-icons">edit</i>
+                    </div>
+                    <div class="task-settings-button">
+                      <i class="material-icons">more_horiz</i>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+    
+            <div class="new-task-button">
+              <i class="material-icons" [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)', 'font-size': '21px'}" >add</i>
+              <p [ngStyle]="{'color': 'var(--color-' + column.color + '-dark)'}">Nouveau</p>
+            </div>
+          </div>
 </section>
 
