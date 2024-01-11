@@ -15,7 +15,8 @@ import { KanbanPageComponent } from './pages/kanban-page/kanban-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+import { SidebarComponent } from './sidebar/sidebar.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatDialogModule } from '@angular/material/dialog'
     KanbanPageComponent,
     HomeComponent,
     TodoItemComponent,
-    EditTodoDialogComponent
+    EditTodoDialogComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
