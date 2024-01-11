@@ -17,9 +17,9 @@ export class KanbanComponent {
     [
       new Task(
         [
-          'test',
-          'test',
-          'test'
+          'Some random idea',
+          'This is another random idea',
+          'build an awesome application'
         ],
         [
           '🦖',
@@ -30,39 +30,116 @@ export class KanbanComponent {
     ],
     'gray'
     ),
-    // new Column('Todo', 
-    //   {content: 'test', icon: 'test'},
-    //   // new Task({ content: 'Get to work', icon: '🦖'}),
-    //   // new Task({ content: 'Pick up groceries', icon: '❤️'}),
-    //   // new Task({ content: 'Go home', icon: '🦖'}),
-    //   // new Task({ content: 'Fall asleep', icon: '❤️'})
-    // 'brown'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    //   // new Task({ content: 'Get up', icon: '🦖'}),
-    //   // new Task({ content: 'Brush teeth', icon: '❤️'}),
-    //   // new Task({ content: 'Take a shower', icon: '🦖'}),
-    //   // new Task({ content: 'Check e-mail', icon: '🦖'}),
-    //   // new Task({ content: 'Walk dog', icon: '❤️'})
-    // 'orange'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    // 'yellow'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    // 'green'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    // 'blue'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    // 'purple'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    // 'pink'),
-    // new Column('Done', 
-    //   {content: 'test', icon: 'test'},
-    // 'red')
+    new Column('Todo',
+    [
+      new Task(
+        [
+          'Get to work',
+          'Pick up groceries',
+          'Go home',
+          'Fall asleep'
+        ],
+        [
+          '🚧',
+          '🫐',
+          '🏠',
+          '💤'
+        ]
+      )
+    ],
+    'brown'),
+    new Column('Done',
+    [
+      new Task(
+        [
+          'Get up',
+          'Brush teeth',
+          'Take a shower',
+          'Check e-mail',
+          'Walk dog'
+        ],
+        [
+          '🛏️',
+          '🪥',
+          '🚿',
+          '✉️',
+          '🐶'
+        ]
+      )
+    ],
+    'orange'),
+    new Column('Done',
+    [
+      new Task(
+        [
+
+        ],
+        [
+
+        ]
+      )
+    ],
+    'yellow'),
+    new Column('Done',
+    [
+      new Task(
+        [
+
+        ],
+        [
+          
+        ]
+      )
+    ],
+    'green'),
+    new Column('Done',
+    [
+      new Task(
+        [
+
+        ],
+        [
+          
+        ]
+      )
+    ],
+    'blue'),
+    new Column('Done',
+    [
+      new Task(
+        [
+
+        ],
+        [
+          
+        ]
+      )
+    ],
+    'purple'),
+    new Column('Done',
+    [
+      new Task(
+        [
+
+        ],
+        [
+          
+        ]
+      )
+    ],
+    'pink'),
+    new Column('Done',
+    [
+      new Task(
+        [
+
+        ],
+        [
+          
+        ]
+      )
+    ],
+    'red')
   ]);
 
   drop(event: CdkDragDrop<string[]>) {
