@@ -89,7 +89,7 @@ export class KanbanComponent {
     'red')
   ]);
 
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<{ text: string; icon: string; }[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
