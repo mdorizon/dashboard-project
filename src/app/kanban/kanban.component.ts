@@ -15,129 +15,76 @@ export class KanbanComponent {
     new Column(
     'Ideas',
     [
-      new Task(
-        [
-          'Some random idea',
-          'This is another random idea',
-          'build an awesome application'
-        ],
-        [
-          '🦖',
-          '⭐',
-          '❤️'
-        ]
-      )
+      new Task([
+        { text: 'Get to work', icon: '🚧' },
+        { text: 'Pick up groceries', icon: '🫐' },
+        { text: 'Go home', icon: '🏠' },
+        { text: 'Fall asleep', icon: '💤' }
+      ])
     ],
     'gray'
     ),
     new Column('Todo',
     [
-      new Task(
-        [
-          'Get to work',
-          'Pick up groceries',
-          'Go home',
-          'Fall asleep'
-        ],
-        [
-          '🚧',
-          '🫐',
-          '🏠',
-          '💤'
-        ]
-      )
+      new Task([
+        { text: 'Get up', icon: '🛏️' },
+        { text: 'Brush teeth', icon: '🪥' },
+        { text: 'Take a shower', icon: '🚿' },
+        { text: 'Check e-mail', icon: '✉️' },
+        { text: 'Walk dog', icon: '🐶' }
+      ])
     ],
     'brown'),
     new Column('Done',
     [
-      new Task(
-        [
-          'Get up',
-          'Brush teeth',
-          'Take a shower',
-          'Check e-mail',
-          'Walk dog'
-        ],
-        [
-          '🛏️',
-          '🪥',
-          '🚿',
-          '✉️',
-          '🐶'
-        ]
-      )
+      new Task([
+        { text: 'Get up', icon: '🛏️' },
+        { text: 'Brush teeth', icon: '🪥' },
+        { text: 'Check e-mail', icon: '✉️' },
+        { text: 'Walk dog', icon: '🐶' }
+      ])
     ],
     'orange'),
     new Column('Done',
     [
-      new Task(
-        [
+      new Task([
 
-        ],
-        [
-
-        ]
-      )
+      ])
     ],
     'yellow'),
     new Column('Done',
     [
-      new Task(
-        [
+      new Task([
 
-        ],
-        [
-          
-        ]
-      )
+      ])
     ],
     'green'),
     new Column('Done',
     [
-      new Task(
-        [
+      new Task([
 
-        ],
-        [
-          
-        ]
-      )
+      ])
     ],
     'blue'),
     new Column('Done',
     [
-      new Task(
-        [
+      new Task([
 
-        ],
-        [
-          
-        ]
-      )
+      ])
     ],
     'purple'),
     new Column('Done',
     [
-      new Task(
-        [
+      new Task([
 
-        ],
-        [
-          
-        ]
-      )
+      ])
     ],
     'pink'),
     new Column('Done',
     [
-      new Task(
-        [
+      new Task([
 
-        ],
-        [
-          
-        ]
-      )
+      ])
     ],
     'red')
   ]);

@@ -1,3 +1,3 @@
 export class Task {
-  constructor(public content: string[], public icon: string[]) {}
+  constructor(public content: { text: string, icon: string }[]) {}
 }

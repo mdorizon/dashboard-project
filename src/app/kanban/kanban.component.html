@@ -31,16 +31,15 @@
           </div>
   
           <div class="tasks-container" *ngFor="let task of column.tasks">
-            <div class="task" *ngFor="let content of task.content; let i = index" cdkDrag>
+            <div class="task" *ngFor="let content of task.content" cdkDrag>
               <div class="dragging-placeholder" *cdkDragPlaceholder></div>
               <div class="tasks-content">
                 <div class="tasks-content-icon">
-                  <p>{{ task.icon[i] }}</p>
+                  <p>{{ content.icon }}</p>
                 </div>
                 <div class="tasks-content-text">
-                  {{ content }}
+                  {{ content.text }}
                 </div>
-  
                 <div class="tasks-content-buttons">
                   <div class="task-edit-button">
                     <i class="material-icons">edit</i>
