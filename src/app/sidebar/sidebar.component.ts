@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { sidebarData } from './sidebar-data';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+
+  collapsed = false;
+  screenWidth = 0;
+  sideData = sidebarData
+
+  toggleCollapse(): void{
+    this.collapsed= !this.collapsed
+  }
+
+  closeSidebar(): void{
+    this.collapsed = false
+  }
 }

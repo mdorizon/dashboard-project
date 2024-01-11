@@ -1,7 +1,12 @@
 .sidebar {
-  height: 100%;
-  width: 250px;
+  height: 100vh;
+  width: 5rem;
   border-right: 1px solid #eee;
+  transition: all 0.5s ease;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background: white;
 }
 .sidebar .logo-container {
   display: flex;
@@ -35,6 +40,10 @@
   font-size: 30px;
 }
 
+.sidebar-collapsed {
+  width: 16.5rem;
+}
+
 .list-items {
   display: flex;
   flex-direction: column;
@@ -48,6 +57,7 @@
   align-items: flex-end;
   cursor: pointer;
   color: rgb(65, 62, 62);
+  transition: color 0.3s ease;
 }
 .list-items .list-item:hover {
   background-color: #eee;
