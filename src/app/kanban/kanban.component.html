@@ -31,7 +31,7 @@
         </div>
 
         <div class="tasks-container">
-          <div class="task" *ngFor="let item of column.tasks" cdkDrag>
+          <div class="task" *ngFor="let item of column.tasks.content" cdkDrag>
             <div class="dragging-placeholder" *cdkDragPlaceholder></div>
             <div class="tasks-content">
               <div class="tasks-content-icon">
