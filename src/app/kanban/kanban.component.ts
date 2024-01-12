@@ -89,6 +89,24 @@ export class KanbanComponent {
     'red')
   ]);
 
+  addEmoji(emoji: any) {
+    console.log(emoji.emoji.native)
+    const panel = document.querySelector('.emoji-mart');
+    panel!.classList.remove('visible');
+  };
+
+  emoTest() {
+    const panel = (document.querySelector('.emoji-mart') as HTMLInputElement);
+    panel!.classList.add('visible');
+  }
+
+  // document.querySelector('.tasks-content-icon')
+  // openEmoji() {
+  //   // const panel = document.querySelector('.emoji-mart');
+  //   // panel!.classList.add('visible');
+  //   console.log('test');
+  // };
+
   drop(event: CdkDragDrop<{ text: string; icon: string; }[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);

@@ -10,6 +10,7 @@ import { TodosComponent } from './todos/todos.component';
 import { KanbanComponent } from './kanban/kanban.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { PickerComponent } from '@ctrl/ngx-emoji-mart';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { KanbanPageComponent } from './pages/kanban-page/kanban-page.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -31,6 +32,7 @@ import { SidebarComponent } from './sidebar/sidebar.component'
   ],
   imports: [
     BrowserModule,
+    PickerComponent,
     AppRoutingModule,
     BrowserAnimationsModule,
     DragDropModule,

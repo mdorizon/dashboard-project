@@ -1,5 +1,22 @@
 @import '../node_modules/bulma/bulma.sass';
 @import '../src/_main-styles.scss';
+@import	'../node_modules/@ctrl/ngx-emoji-mart/picker';
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 9px;
+    background-color: #EDECE9;
+}
+::-webkit-scrollbar-thumb {
+background: #D3D1CB;
+}
+
+.emoji-mart {
+    display: none;
+}
+.visible {
+    display: unset !important;
+}
 
 :root {
   // GRAY KANBAN COLOR

@@ -128,7 +128,7 @@
   opacity: 0;
   position: absolute;
   right: 8px;
-  z-index: 2;
+  z-index: 1;
   top: 8px;
   transition-property: opacity;
   transition-duration: 270ms;
@@ -261,19 +261,9 @@
 .dragging-placeholder {
   background-color: #9AC7F0;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   height: 4px;
   margin: -2px 0;
-}
-
-.board-wrapper::-webkit-scrollbar {
-  width: 5px;
-  height: 9px;
-  background-color: #EDECE9;
-}
-
-.board-wrapper::-webkit-scrollbar-thumb {
-  background: #D3D1CB;
 }
 
 .board-header .board-control-bar {
