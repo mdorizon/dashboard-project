@@ -97,7 +97,7 @@
             <div class="task" *ngFor="let content of task.content; let taskIndex = index" cdkDrag #taskElement>
               <div class="dragging-placeholder" *cdkDragPlaceholder></div>
               <div class="tasks-content">
-                <div (click)="emoTest()" class="tasks-content-icon">
+                <div (click)="emoTest(taskIndex, columnIndex)" class="tasks-content-icon">
                   <p>{{ content.icon }}</p>
                 </div>
                 <div class="tasks-content-text">
@@ -116,8 +116,8 @@
                 </div>
                 
               </div>
+              <!-- <emoji-mart class="emoji-picker" (emojiClick)="addEmoji($event)" [style]="{ 'z-index': '1000', position: 'absolute', bottom: '20px', right: '20px' }" [i18n]="{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }"></emoji-mart> -->
             </div>
-            <!-- <emoji-mart class="emoji-picker" (emojiClick)="addEmoji($event)" [style]="{ 'z-index': '1000', position: 'absolute', bottom: '20px', right: '20px' }" [i18n]="{ search: 'Recherche', categories: { search: 'Résultats de recherche', recent: 'Récents' } }"></emoji-mart> -->
           </div>
         </div>
 

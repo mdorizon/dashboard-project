@@ -89,8 +89,6 @@ export class KanbanComponent {
     ],
     'red')
   ]);
-
-  @ViewChild('formInput',{static:false, read: ElementRef}) elRef;
   
   formValue: string = 'default';
 
@@ -116,35 +114,50 @@ export class KanbanComponent {
     const taskElement = (event.target as HTMLElement).closest('.task');
     const textElement = taskElement?.querySelector('.tasks-content-text');
     const formElement = taskElement?.querySelector('.tasks-content-form');
-
+    
     const column = this.board.columns[columnIndex]
     const task = column.tasks[0]
     const content = task.content[taskIndex]
 
+    // @ViewChild('formInput',{static:false, read: ElementRef}) formInput: ElementRef;
+    
     textElement?.classList.add('hidden');
     formElement?.classList.remove('hidden');
-
-
-    console.log(Element)
-    console.log(formElement)
-
-
+    
+    // this.formInput.nativeElement.focus();
     this.formValue = content.text;
   }
-  
-  addEmoji(select: any) {
-    var emoji = select.emoji.native;
-    console.log(emoji);
-    console.log(select);
-    const panel = document.querySelector('.emoji-mart');
-    panel!.classList.remove('visible');
-  };
 
-  emoTest() {
+  // let colIndex = 0
+  // let taskIndex = 0
+
+  emoTest(taskIndex: number, columnIndex: number) {
+    const column = this.board.columns[columnIndex]
+    const task = column.tasks[0]
+    const content = task.content[taskIndex]
+
+    console.log(content.icon + '  ' + content.text)
+
     const panel = (document.querySelector('.emoji-mart') as HTMLInputElement);
     panel!.classList.add('visible');
-    console.log();
+
+    // colIndex = columnIndex
+    // taskIndex = taskIndex
   };
+  
+  // addEmoji(select: any) {
+  //   const column = colIndex
+  //   const task = column.tasks[0]
+  //   const content = taskIndex
+
+  //   console.log(content.icon + '  ' + content.text)
+
+  //   const emoji = select.emoji.native;
+
+  //   content.icon = emoji
+  //   const panel = document.querySelector('.emoji-mart');
+  //   panel!.classList.remove('visible');
+  // };
 
   drop(event: CdkDragDrop<{ text: string; icon: string; }[]>) {
     if (event.previousContainer === event.container) {
