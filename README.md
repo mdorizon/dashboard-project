@@ -19,6 +19,7 @@ Vous arrivez directement sur cette page:
 
 ![Screenshot_1](https://github.com/mdorizon/dashboard-project/assets/81165006/5be56ed2-5baa-4f03-916f-d72329abfc71)
 
+Vous pouvez maintenant naviguer à votre souhait !
 
 ## Fabriqué avec
 
