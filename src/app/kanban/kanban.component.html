@@ -67,7 +67,7 @@
 
   <div class="board-wrapper">
     <div class="board-columns" cdkDropListGroup>
-      <div class="board-column" *ngFor="let column of board.columns; let columnIndex = index" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
+      <div #columnElement class="board-column" *ngFor="let column of board.columns; let columnIndex = index" [ngStyle]="{'background-color': 'var(--color-' + column.color + '-light)'}">
         <div class="drop-list" *ngFor="let task of column.tasks" cdkDropList [cdkDropListData]="task.content" (cdkDropListDropped)="drop($event)">
           <div class="column-head">
             <div class="column-title-left-content">
@@ -94,20 +94,20 @@
           </div>
   
           <div class="tasks-container" *ngFor="let task of column.tasks">
-            <div class="task" *ngFor="let content of task.content; let taskIndex = index" cdkDrag #taskElement>
+            <div class="task" *ngFor="let content of task.content; let taskId = index" cdkDrag #taskElement>
               <div class="dragging-placeholder" *cdkDragPlaceholder></div>
               <div class="tasks-content">
-                <div (click)="emoTest(taskIndex, columnIndex)" class="tasks-content-icon">
+                <!-- <div (click)="emoTest(taskId, columnIndex)" class="tasks-content-icon"> -->
                   <p>{{ content.icon }}</p>
-                </div>
+                <!-- </div> -->
                 <div class="tasks-content-text">
                   {{ content.text }}
                 </div>
-                <form class="tasks-content-form hidden" (ngSubmit)="onFormSubmit($event, form, taskIndex, columnIndex)" #form="ngForm">
+                <form class="tasks-content-form hidden" (ngSubmit)="onFormSubmit($event, form, taskId, columnIndex)" #form="ngForm">
                   <input #formInput ngModel #todoTextField="ngModel" required minlength="2" name="text" class="input tasks-content-input" type="text" [(ngModel)]="formValue">
                 </form>
                 <div class="tasks-content-buttons">
-                  <div class="task-edit-button" (click)="onEditClicked($event, taskIndex, columnIndex)">
+                  <div class="task-edit-button" (click)="onEditClicked($event, taskId, columnIndex)">
                     <i class="material-icons">edit</i>
                   </div>
                   <div class="task-settings-button">
