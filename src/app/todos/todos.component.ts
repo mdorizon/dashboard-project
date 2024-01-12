@@ -4,6 +4,7 @@ import { DataService } from '../shared/data.service';
 import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { EditTodoDialogComponent } from '../edit-todo-dialog/edit-todo-dialog.component';
+import { NewTodoDialogComponent } from '../new-todo-dialog/new-todo-dialog.component';
 import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { Board } from '../models/board.model';
 import { Column } from '../models/column.model';
@@ -64,6 +65,23 @@ export class TodosComponent implements OnInit{
       }
     })
   }
+
+  newTodo(todo: Todo){
+
+    const index = this.todos.indexOf(todo)
+
+    let dialogRef = this.dialog.open(NewTodoDialogComponent, {
+      width: '700px',
+      data: todo
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.dataService.updateTodo(index, result)
+      }
+    })
+  }
+  
 
   deleteTodo(todo: Todo){
     const index = this.todos.indexOf(todo)

@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Todo } from '../shared/todo.model';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
@@ -8,7 +8,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   templateUrl: './new-todo-dialog.component.html',
   styleUrl: './new-todo-dialog.component.scss'
 })
-export class NewTodoDialogComponent {
+export class NewTodoDialogComponent implements OnInit{
 
   constructor(
     public dialogRef: MatDialogRef<NewTodoDialogComponent>,
