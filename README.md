@@ -8,7 +8,7 @@ Assurez vous d'avoir la dernière version de Node (20.10.3) en executant "npm -v
 
 Vous pouvez maintenant executer `npm install` pour installer les paquets utile pour notre projet.
 
-Et enfin nous pouvons executer "npm install -g @angular/cli" qui permet d'executer des commandes liés à Angular, comme par exemple lancer le projet 😉
+Et enfin nous pouvons executer `npm install -g @angular/cli` qui permet d'executer des commandes liés à Angular, comme par exemple lancer le projet 😉
 
 ### Démarrage
 
