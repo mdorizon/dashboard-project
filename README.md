@@ -1,27 +1,35 @@
-# Dashboard
+# Titre du projet
+_(juste en dessous des badges sympatiques à placer)_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+[![forthebadge](https://forthebadge.com/images/featured/featured-built-with-love.svg)]
 
-## Development server
+Voici notre Dashboard Project, réalisé durant une semaine de "Projet Framework" dans le but d'apprendre à utiliser Angular via la réalisation d'une app.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Pour commencer
 
-## Code scaffolding
+Assurez vous d'avoir la dernière version de Node en executant "npm -v" dans un terminal, celui de votre IDE par exemple.
+Vous pouvez maintenant executer "npm install" pour installer les paquets utile pour notre projet.
+Et enfin nous pouvons executer "npm install -g @angular/cli" qui permet d'executer des commandes liés à Angular, comme par exemple lancer le projet 😉
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Démarrage
 
-## Build
+Executez la commande "ng serve -o" pour ouvrir le dev server et pouvoir naviguer dans l'app, depuis `http://localhost:4200/`. 
+Vous arrivez directement sur cette page: ![Screenshot_1](https://github.com/mdorizon/dashboard-project/assets/81165006/5be56ed2-5baa-4f03-916f-d72329abfc71)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Fabriqué avec
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
 
-## Running end-to-end tests
+* [Bulma](https://bulma.io/) - Framework CSS (front-end)
+* [Angular](https://angular.io/) version 17.0.9 - Framework JavaScript (front-end)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Auteurs
 
-## Further help
+Réalisé par ces 2 merveilleuses personnes
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* **Maxence Dorizon** _alias_ [mdorizon](https://github.com/mdorizon)
+* **Justin Pitra** _alias_ [Just1P](https://github.com/Just1P)
+
+
+
