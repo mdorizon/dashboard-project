@@ -2,6 +2,9 @@
 
 Voici notre Dashboard Project, réalisé durant une semaine de "Projet Framework" dans le but d'apprendre à utiliser Angular via la réalisation d'une app supervisé par **Sayah El Yatim** _alias_ [sqqyqqh](https://github.com/sqqyqqh)
 
+![Screenshot_2](https://github.com/mdorizon/dashboard-project/assets/81165006/4d27eed6-0da8-4d88-8477-dab2fab951c7)
+
+
 ## Pour commencer
 
 Assurez vous d'avoir la dernière version de Node (10.2.3) en executant `npm -v` dans un terminal, celui de votre IDE par exemple.
