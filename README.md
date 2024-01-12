@@ -4,9 +4,9 @@ Voici notre Dashboard Project, réalisé durant une semaine de "Projet Framework
 
 ## Pour commencer
 
-Assurez vous d'avoir la dernière version de Node en executant "npm -v" dans un terminal, celui de votre IDE par exemple.
+Assurez vous d'avoir la dernière version de Node (20.10.3) en executant "npm -v" dans un terminal, celui de votre IDE par exemple.
 
-Vous pouvez maintenant executer "npm install" pour installer les paquets utile pour notre projet.
+Vous pouvez maintenant executer `npm install` pour installer les paquets utile pour notre projet.
 
 Et enfin nous pouvons executer "npm install -g @angular/cli" qui permet d'executer des commandes liés à Angular, comme par exemple lancer le projet 😉
 
