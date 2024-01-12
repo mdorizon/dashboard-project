@@ -1,7 +1,5 @@
 # Dashboard Project
 
-![forthebadge](https://forthebadge.com/images/featured/featured-built-with-love.svg)
-
 Voici notre Dashboard Project, réalisé durant une semaine de "Projet Framework" dans le but d'apprendre à utiliser Angular via la réalisation d'une app supervisé par **Sayah El Yatim** _alias_ [sqqyqqh](https://github.com/sqqyqqh)
 
 ## Pour commencer
