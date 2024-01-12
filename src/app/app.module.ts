@@ -16,7 +16,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { EditTodoDialogComponent } from './edit-todo-dialog/edit-todo-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { SidebarComponent } from './sidebar/sidebar.component'
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NewTodoDialogComponent } from './new-todo-dialog/new-todo-dialog.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SidebarComponent } from './sidebar/sidebar.component'
     HomeComponent,
     TodoItemComponent,
     EditTodoDialogComponent,
-    SidebarComponent
+    SidebarComponent,
+    NewTodoDialogComponent
   ],
   imports: [
     BrowserModule,

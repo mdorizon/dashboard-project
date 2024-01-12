@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../shared/todo.model'
 import { DataService } from '../shared/data.service';
 import { NgForm } from '@angular/forms';
@@ -15,6 +15,12 @@ import { Column } from '../models/column.model';
   styleUrl: './todos.component.scss'
 })
 export class TodosComponent implements OnInit{
+
+  @Output() newTodoClicked: EventEmitter<void> = new EventEmitter()
+
+  onNewTodoClicked(){
+    this.newTodoClicked.emit()
+  }
 
   todos : Todo[]
   showValidationErrors: boolean
