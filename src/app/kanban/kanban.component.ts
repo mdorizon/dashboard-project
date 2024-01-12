@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CdkDragStart, CdkDragMove, CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { Board } from '../models/board.model';
 import { Column } from '../models/column.model';
 import { Task } from '../models/task.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-kanban',
@@ -89,8 +90,52 @@ export class KanbanComponent {
     'red')
   ]);
 
-  addEmoji(emoji: any) {
-    console.log(emoji.emoji.native)
+  @ViewChild('formInput',{static:false, read: ElementRef}) elRef;
+  
+  formValue: string = 'default';
+
+  onFormSubmit(event: Event, form: NgForm, taskIndex: number, columnIndex: number) {
+    const taskElement = (event.target as HTMLElement).closest('.task');
+    const textElement = taskElement?.querySelector('.tasks-content-text');
+    const formElement = taskElement?.querySelector('.tasks-content-form');
+    const inputElement = taskElement?.querySelector('.tasks-content-input');
+
+    const column = this.board.columns[columnIndex]
+    const task = column.tasks[0]
+    const content = task.content[taskIndex]
+
+    // inputElement?.focus();
+
+    textElement?.classList.remove('hidden');
+    formElement?.classList.add('hidden');
+    
+    content.text = form.value.text
+  }
+
+  onEditClicked(event: Event, taskIndex: number, columnIndex: number) {
+    const taskElement = (event.target as HTMLElement).closest('.task');
+    const textElement = taskElement?.querySelector('.tasks-content-text');
+    const formElement = taskElement?.querySelector('.tasks-content-form');
+
+    const column = this.board.columns[columnIndex]
+    const task = column.tasks[0]
+    const content = task.content[taskIndex]
+
+    textElement?.classList.add('hidden');
+    formElement?.classList.remove('hidden');
+
+
+    console.log(Element)
+    console.log(formElement)
+
+
+    this.formValue = content.text;
+  }
+  
+  addEmoji(select: any) {
+    var emoji = select.emoji.native;
+    console.log(emoji);
+    console.log(select);
     const panel = document.querySelector('.emoji-mart');
     panel!.classList.remove('visible');
   };
@@ -98,14 +143,8 @@ export class KanbanComponent {
   emoTest() {
     const panel = (document.querySelector('.emoji-mart') as HTMLInputElement);
     panel!.classList.add('visible');
-  }
-
-  // document.querySelector('.tasks-content-icon')
-  // openEmoji() {
-  //   // const panel = document.querySelector('.emoji-mart');
-  //   // panel!.classList.add('visible');
-  //   console.log('test');
-  // };
+    console.log();
+  };
 
   drop(event: CdkDragDrop<{ text: string; icon: string; }[]>) {
     if (event.previousContainer === event.container) {
