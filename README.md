@@ -21,7 +21,7 @@ Vous arrivez directement sur cette page:
 
 Vous pouvez maintenant naviguer à votre souhait !
 
-## Fabriqué avec
+## ![forthebadge](https://forthebadge.com/images/featured/featured-built-with-love.svg)
 
 Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
 
