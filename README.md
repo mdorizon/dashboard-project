@@ -15,7 +15,9 @@ Et enfin nous pouvons executer "npm install -g @angular/cli" qui permet d'execut
 ### Démarrage
 
 Executez la commande "ng serve -o" pour ouvrir le dev server et pouvoir naviguer dans l'app, depuis `http://localhost:4200/`. 
-Vous arrivez directement sur cette page: ![Screenshot_1](https://github.com/mdorizon/dashboard-project/assets/81165006/5be56ed2-5baa-4f03-916f-d72329abfc71)
+Vous arrivez directement sur cette page:
+
+![Screenshot_1](https://github.com/mdorizon/dashboard-project/assets/81165006/5be56ed2-5baa-4f03-916f-d72329abfc71)
 
 
 ## Fabriqué avec
