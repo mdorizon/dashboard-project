@@ -1,5 +1,4 @@
-# Titre du projet
-_(juste en dessous des badges sympatiques à placer)_
+# Dashboard Project
 
 ![forthebadge](https://forthebadge.com/images/featured/featured-built-with-love.svg)
 
