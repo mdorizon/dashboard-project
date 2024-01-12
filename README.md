@@ -21,8 +21,6 @@ Vous pouvez maintenant naviguer à votre souhait !
 
 ## Fabriqué avec
 
-Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
-
 * [Bulma](https://bulma.io/) - Framework CSS (front-end)
 * [Angular](https://angular.io/) version 17.0.9 - Framework JavaScript (front-end)
 
